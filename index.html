@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Me</title>
+
+    <style>
+         div{
+            width: 100px;
+            height: 80px;
+             display: flex;
+             align-items: center;
+             position: relative;
+         }
+
+         p{
+            padding: 10px;
+            position: absolute;
+            background-color: aqua;
+            width: 100px;
+            height: 80px;
+         }
+    </style>
+</head>
+<body>
+
+    <div id="catch">
+        <p id="catchme">Catch me if you can</p>
+    </div>
+     <script>
+
+           const catchme = document.getElementById("catchme");
+           catchme.addEventListener("mouseover",()=> {
+               const top = Math.floor(Math.random()*500)
+               const left = Math.floor(Math.random()*1000)
+             
+               catchme.style.left = left + "px"
+               catchme.style.top = top +"px"
+               
+           })
+           
+     </script>
+</body>
+</html>
